@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Todo from "./components/Todo";
 
 // function App() {
 //   return (
@@ -25,11 +26,11 @@ import './App.css';
 function App(props) {
   return (
     <div className="todoapp stack-large">
-      <h1>TodoMatic</h1>
+      <h1>Todo List</h1>
       <form>
         <h2 className="label-wrapper">
           <label htmlFor="new-todo-input" className="label__lg">
-            What needs to be done?
+            What's on your mind?
           </label>
         </h2>
         <input
@@ -68,7 +69,10 @@ function App(props) {
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading"
       >
-        <li className="todo stack-small">
+        <Todo name = "Eat" completed={true} id = "todo-0" />
+        <Todo name = "Sleep" completed={true} id = "todo-1" />
+        <Todo name = "Repeat" completed={true} id = "todo-2" />
+        {/* <li className="todo stack-small">
           <div className="c-cb">
             <input id="todo-0" type="checkbox" defaultChecked={true} />
             <label className="todo-label" htmlFor="todo-0">
@@ -115,7 +119,7 @@ function App(props) {
               Delete <span className="visually-hidden">Repeat</span>
             </button>
           </div>
-        </li>
+        </li> */}
       </ul>
     </div>
   );
